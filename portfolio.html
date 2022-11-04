@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ba55640131.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-text">
+        <p>Developer</p>
+        <h1>Hello,I'm <span>Aditya Singh</span></h1>
+    </div>
+  </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+        <div class="about-col-1">
+         <img src="portfolio.png">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="sub">I am a front-end web developer.I can provide clean code and pixel perfect design.I can make your websites interactive and responsive.A responsive website is accessible to all users,regardless of their devices.Other than web-development,I am a competitive programmer too and can use my problem solving skills to solve your real-world problem statements. </p>
+            <div class="tab-titles">
+               <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+               <p class="tab-links" onclick="opentab('education')">Education</p> 
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>HTML/CSS/Javascript</li>
+                    <li><span>Competitive Programming</span><br>C/C++/Python</li>
+                    <li><span>Machine Learning</span><br>Neural Networks & ML-Algorithms</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2021-2025</span><br>B.tech in Computer Science from AKGEC</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!------services------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h1 style="font-size: 25px;color: white;">Web Development</h1>
+                <p style="color:white;">Get yourself a interactive and responsive website for your business.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h1 style="font-size: 25px;color: white">Problem Solving</h1>
+                <p style="color:white;">Get your computational problem solved in efficient manner with the help of optimized programs.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-circle-nodes"></i>
+                <h1 style="font-size: 25px;color: white">Machine Learning</h1>
+                <p style="color:white ;">Get your work automated by implementation of ML & Deep learning methods.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>aditya8178ps@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+91-8178830383</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/home"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="btn">
+            <a href="">Download CV</a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made with<i class="fa-solid fa-heart"></i> by Aditya</p>
+    </div>
+</div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");  
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");  
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
